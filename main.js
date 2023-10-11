@@ -1,8 +1,8 @@
 const puppeteer = require('puppeteer');
-const URL_TO_SCRAPE = "https://www.animecharactersdatabase.com/quotesbycharacter.php?x=20&cid=1019";
 const PAGE_COUNT = 66;
 
 const buildURL = (currentPage) => {
+  // No need to copy and paste the entire url to scrape, just changing the cid should be enough
   const URL_TO_SCRAPE = `https://www.animecharactersdatabase.com/quotesbycharacter.php?x=${currentPage*10}&cid=1019`;
   return URL_TO_SCRAPE;
 }
